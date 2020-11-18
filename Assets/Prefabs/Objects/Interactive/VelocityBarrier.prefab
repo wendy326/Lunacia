@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6516479164795096220}
   - component: {fileID: 6516479164795096221}
   - component: {fileID: 6516479164795096222}
+  - component: {fileID: -6253043196160102991}
   m_Layer: 0
   m_Name: VelocityBarrier
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6516479164795096223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.03, y: -2.51, z: -2}
+  m_LocalPosition: {x: -3.03, y: -2.51, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5361392113557956038}
@@ -72,10 +73,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRB: {fileID: 0}
-  velocityThreshold: 6
+  velocityThreshold: 10
   recoil: 3
   burstSpeed: 10
   burst: {fileID: 1700841743376608552}
+--- !u!114 &-6253043196160102991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516479164795096223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX Events/VBarrier Idle
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10
 --- !u!1001 &6516479164525492848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,12 +165,17 @@ PrefabInstance:
     - target: {fileID: 5617595997300504675, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -176159485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5617595997300504675, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617595997300504675, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5617595997300504676, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
         type: 3}
@@ -171,12 +200,17 @@ PrefabInstance:
     - target: {fileID: 5617595997570520919, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -176159485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5617595997570520919, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617595997570520919, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5617595997570520920, guid: 9a9d2e7cfc75571459ebaa6bf98afce2,
         type: 3}

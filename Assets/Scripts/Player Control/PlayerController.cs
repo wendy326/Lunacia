@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         //Get the Cursor Position relative to the player
         Vector3 moveDirection = Vector3.zero;
         if (Input.GetMouseButton(0)) {
+            //Debug.Log(Input.mousePosition);
             moveDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             moveDirection.z = 0f;
         } else {
@@ -40,5 +41,6 @@ public class PlayerController : MonoBehaviour
         force += Mathf.Clamp(Vector2.Dot(force.normalized, boost), 0, Mathf.Infinity) * force.normalized;
 
         rigid.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
+        // print(rigid.velocity.magnitude);
     }
 }
